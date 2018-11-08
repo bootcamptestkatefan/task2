@@ -1,5 +1,25 @@
 'use strict';
 
 function createUpdatedCollection(collectionA, objectB) {
-  return 'Implement the practice require, and begin changing code in this row';
+
+var newArray = objectB.value;
+var result = [...new Set(collectionA)];
+
+	for (var i = 0 ; i < result.length ; i++){
+
+		for (var j = 0 ; j < newArray.length ; j++){
+
+			if (newArray[j] == result[i].key){
+
+				result[i].count -= Math.floor(result[i].count / 3);
+			}
+		}
+
+	}
+
+
+
+
+
+  return result;
 }
